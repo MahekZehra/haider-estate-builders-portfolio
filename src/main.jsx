@@ -73,6 +73,7 @@ function App(){
   </main>
   <footer><div className="footer-brand"><img className="brand-logo footer-logo" src={LOGO} alt="Haider Estate & Builders logo" /><div><strong>HAIDER</strong><span>ESTATE & BUILDERS</span><small>Building Spaces. Delivering Excellence.</small></div></div><div><b>QUICK LINKS</b>{nav.map(n=><button key={n} onClick={()=>scroll(n.toLowerCase())}>{n}</button>)}</div><div><b>OUR SERVICES</b>{services.slice(0,5).map(([n])=><span key={n}>{n}</span>)}</div><div><b>CONTACT INFO</b><span>0300 3638688</span><span>0312 2609099</span><span>Pakistan</span></div></footer>
   <div className="copyright">© 2026 Haider Estate & Builders. All Rights Reserved.</div>
+  <div>Designed and developed by MZ Creatives.</div>
   {video&&<div className="modal" onClick={()=>setVideo(null)}><div className="modal-inner" onClick={e=>e.stopPropagation()}><button className="modal-close" onClick={()=>setVideo(null)}><X/></button><video controls autoPlay muted playsInline preload="auto"><source src={A+video.src} type="video/mp4"/><p>Your browser could not load this video. Please try again.</p></video><div><p className="eyebrow">WORK SHOWCASE</p><h2>{video.title}</h2><p>{video.text}</p></div></div></div>}
  </div>
 }
